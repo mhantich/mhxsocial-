@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import { useState } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import NavBar from "@/components/NavBar";
 
 function Movie() {
   const { loading: isloading, data, error } = useGetMovieQuery();
@@ -54,6 +55,7 @@ function Movie() {
   }
   return (
     <>
+        <NavBar  />
       <div
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/w500${data?.results[activeSlide]?.poster_path})`,

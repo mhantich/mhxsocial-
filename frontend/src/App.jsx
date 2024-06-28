@@ -14,7 +14,6 @@ import Regester from "./page/Regester";
 const MainContent = lazy(() => import("./components/MainContent"));
 const Profile = lazy(() => import("./page/Profile"));
 
-const Weather = lazy(() => import("./page/Weather"));
 const Marketplace = lazy(() => import("./page/marketplace"));
 const Groups = lazy(() => import("./page/Groups"));
 const Friends = lazy(() => import("./page/Friends"));
@@ -65,42 +64,9 @@ const router = createBrowserRouter([
 
 
 
-      {
-        path: "/Weather",
-        element: (
-          <Suspense
-            fallback={
-              <div className="fixed  z-50 top-0 right-0 bottom-0 left-0 w-full h-full flex justify-center items-center">
-                <Lottie
-                  style={{ width: "14rem", height: "16rem" }}
-                  animationData={loading}
-                  loop={true}
-                />
-              </div>
-            }
-          >
-            <Weather />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/marketplace",
-        element: (
-          <Suspense
-            fallback={
-              <div className="fixed  z-50 top-0 right-0 bottom-0 left-0 w-full h-full flex justify-center items-center">
-                <Lottie
-                  style={{ width: "14rem", height: "16rem" }}
-                  animationData={loading}
-                  loop={true}
-                />
-              </div>
-            }
-          >
-            <Marketplace />
-          </Suspense>
-        ),
-      },
+      
+
+
       {
         path: "/groups",
         element: (
@@ -137,25 +103,44 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
-      {
-        path: "/Movie",
-        element: (
-          <Suspense
-            fallback={
-              <div className="fixed  z-50 top-0 right-0 bottom-0 left-0 w-full h-full flex justify-center items-center">
-                <Lottie
-                  style={{ width: "14rem", height: "16rem" }}
-                  animationData={loading}
-                  loop={true}
-                />
-              </div>
-            }
-          >
-            <Movie />
-          </Suspense>
-        ),
-      },
+
     ],
+  },
+  {
+    path: "/marketplace",
+    element: (
+      <Suspense
+        fallback={
+          <div className="fixed  z-50 top-0 right-0 bottom-0 left-0 w-full h-full flex justify-center items-center">
+            <Lottie
+              style={{ width: "14rem", height: "16rem" }}
+              animationData={loading}
+              loop={true}
+            />
+          </div>
+        }
+      >
+        <Marketplace />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/Movie",
+    element: (
+      <Suspense
+        fallback={
+          <div className="fixed  z-50 top-0 right-0 bottom-0 left-0 w-full h-full flex justify-center items-center">
+            <Lottie
+              style={{ width: "14rem", height: "16rem" }}
+              animationData={loading}
+              loop={true}
+            />
+          </div>
+        }
+      >
+        <Movie />
+      </Suspense>
+    ),
   },
   {
     path: "/Login",

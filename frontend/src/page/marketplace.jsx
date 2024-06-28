@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button.jsx";
 import Lottie from "lottie-react";
 import { Indexerror, loading } from "@/animation/index.js";
+import NavBar from "@/components/NavBar.jsx";
 
 function Marketplace() {
   const { data, isLoading, error } = useGetmarkPlaceQuery();
@@ -22,7 +23,11 @@ function Marketplace() {
   
 
   return (
-    <div className="container mx-auto mt-20 flex flex-col lg:flex-row gap-6">
+    <>
+     <NavBar  />
+    
+   
+    <div className="container mx-auto mt-36 flex flex-col lg:flex-row gap-6">
       <div className="flex flex-col gap-4 ">
         
   
@@ -134,6 +139,7 @@ function Marketplace() {
         <ShoppingCart size={24} className="self-end" />
       </div>
     </div>
+    </>
   );
 }
 
