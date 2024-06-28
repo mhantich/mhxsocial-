@@ -61,7 +61,7 @@ function Groups() {
       
 
   return (
-    <div className="mt-20 min-h-screen flex items-center">
+    <div className="mt-20 min-h-screen md:w-4/6 md:mx-auto flex items-center">
   
  
   { 

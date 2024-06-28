@@ -6,7 +6,7 @@ function WedgetNews() {
 
   return (
     <>
-      <div className=" justify-around  flex  flex-col h-full  " id="widget">
+      <div className="    flex  flex-col h-full  " >
         {webget?.map((item, index) => (
           <div key={index} className=" w-full  px-4 py-4 flex-col sm:flex-row">
             <div className=" duration-700 rounded-sm hover:text-white tran hover:bg-primary w-full">

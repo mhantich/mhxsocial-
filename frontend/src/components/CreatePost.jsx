@@ -73,7 +73,7 @@ function CreatePost() {
   return (
     <div
       
-      className="md:p-4 flex  md:container mt-4 px-1 py-2   bg-white  items-center rounded-3xl justify-between   "
+      className="md:p-4 flex  container mt-4 px-1 py-2 w-full  overflow-hidden  bg-white  items-center rounded-3xl justify-between   "
     >
       <div className="w-11">
         <Avatar>
@@ -81,9 +81,9 @@ function CreatePost() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
-      <form
+       <form
        onSubmit={handleSubmit(onSubmit, onError)}
-        className="flex flex-1 md:container gap-2   items-center justify-between"
+        className="flex flex-1 md:container gap-2 w-20 md:w-full   items-center justify-between"
       >
         <div className="flex md:flex-1  bg-dark items-center px-2 w-96   bg-gray-100 rounded-3xl md:px-1  ">
           <input
@@ -113,7 +113,7 @@ function CreatePost() {
         >
           Publier
         </button>
-      </form>
+      </form> 
     </div>
   );
 }
